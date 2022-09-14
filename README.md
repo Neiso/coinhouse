@@ -1,5 +1,5 @@
 # GET TRANSACTIONS FROM ETH ADDRESS
-To get informations about the transactions of an ETH address, please enter the address in the text input or scan a QR code address containing ONLY the address. If you want more information about specific transaction, you can tap on that transaction and it will roll out more details. You can also click on a "TO" address to search transactions for that address.
+To get informations about the transactions of an ETH address, please enter the address in the text input or scan a QR code address containing ONLY the address. If you want more information about specific transaction, you can tap on that transaction and it will roll out more details. You can also click on the "TO" address to search transactions for that address.
 
 
 ### Install
