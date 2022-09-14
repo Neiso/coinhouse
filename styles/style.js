@@ -10,5 +10,6 @@ export default {
   white: "#ffffff",
   grey: "#6D7385",
   black: "#1B1B1B",
-  error: 'red'
+  error: 'red',
+  buttonBorder: 'magenta'
 }

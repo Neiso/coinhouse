@@ -1,8 +1,36 @@
-- J'ai pris l'initiative d'ajouter React Navigation a la stack
+# GET TRANSACTIONS FROM ETH ADDRESS
+To get informations about the transactions of an ETH address, please enter the address in the text input or scan a QR code address containing ONLY the address. If you want more information about specific transaction, you can click and the transaction it will roll down to give you more details. You can also click on a "TO" address to search transactions for that address.
 
-0xf7eB7637DeD2696B152c7D5EDEe502902B0F1c91
 
-### Amelioration possible:
-- utilisation de i18n pour les langues
-- center les appels api
-- set up une lib pour faire des appels API avec des options de config de cache, timeout, etc, ...
+### Install
+Only run the comand below to install deps
+```bash
+yarn install
+```
+
+Once installed, head to the **app.json** file and add your API KEY in the extra section:
+```JSON
+{
+  "expo": {
+    ...
+    "extra": {
+      "apiKey": "INSERT YOUR API KEY HERE"
+    }
+  }
+}
+```
+
+And launch this command to run this project in an expo environnement:
+```bash
+yarn start
+```
+### Notes
+I took the liberty to add those librairies in order to deliver a better product:
+- @shopify/flash-list
+- @react-navigation/bottom-tabs
+- expo-barcode-scanner
+- expo-constants
+### Possible upgrades:
+- Usage of i18n to make use of language localization
+- Use a form of cache for the transactions calls
+- Set up and history for easier usage of the app

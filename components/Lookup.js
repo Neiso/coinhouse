@@ -14,8 +14,8 @@ import GlobalStyle from '../styles/style'
 // API Helper
 import { LookupAddress } from './Helper/Api'
 
-export default function Lookup() {
-  const [address, setAddress] = useState('0x7a250d5630b4cf539739df2c5dacb4c659f2488d')
+export default function Lookup({ route }) {
+  const [address, setAddress] = useState('')
   const [isLookinUp, setIsLookingUp] = useState(false)
   const [error, setError] = useState('')
   const [transactions, setTransactions] = useState([])
@@ -25,11 +25,13 @@ export default function Lookup() {
     try {
       if (!addressToLookUp.length) return setError('Please enter an address before looking it up!')
       if (addressToLookUp !== address) setAddress(addressToLookUp)
+
       const result = await LookupAddress(addressToLookUp)
       if (result.data.status === '0') {
         setError(result.data.result)
         return setTransactions([])
       }
+
       setTransactions(result.data.result)
       setError('')
     } catch (err) {
@@ -43,6 +45,10 @@ export default function Lookup() {
   useEffect(() => {
     if (error.length) setError('')
   }, [address])
+
+  useEffect(() => {
+    if (route.params && route.params.address) lookUpAddress(route.params.address)
+  }, [route])
 
   return (
     <View style={styles.container}>

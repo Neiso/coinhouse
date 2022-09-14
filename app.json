@@ -30,7 +30,7 @@
       "favicon": "./assets/favicon.png"
     },
     "extra": {
-      "apiKey": "YUFARSEN129FQ3KY1NYUFZ9RSV2ET8TTBU",
+      "apiKey": "",
       "apiEndpoint": "https://api.etherscan.io/api/"
     }
   }

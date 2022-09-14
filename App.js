@@ -8,6 +8,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 // Custom Components
 import Lookup from './components/Lookup';
+import QRScanner from './components/QRScanner';
 
 // Styles
 import GlobalStyle from './styles/style'
@@ -40,8 +41,8 @@ export default function App() {
             component={Lookup}
           />
           <mainBottomTabNav.Screen
-            name='QR Scan'
-            component={Lookup}
+            name='QR Scanner'
+            component={QRScanner}
           />
         </mainBottomTabNav.Navigator>
       </NavigationContainer>
