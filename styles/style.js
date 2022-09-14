@@ -9,5 +9,6 @@ export default {
   inputBgColor: "#1A2038",
   white: "#ffffff",
   grey: "#6D7385",
-  black: "#1B1B1B"
+  black: "#1B1B1B",
+  error: 'red'
 }
